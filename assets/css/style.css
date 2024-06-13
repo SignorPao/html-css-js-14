@@ -7,10 +7,23 @@
 */
 :root {
   /* Colors */
+  --blue: #05164d;
+  --blue-2: #052c58;
+  --white: #ffffff;
+  --yellow: #ffad00;
+  --gray: #666666;
+  --gray-blue: #7d899d;
+  --gray-blue-2: #52627c;
+  --light-gray: #f5f5f5;
   /* Fonts & Typography */
   --font-main: "Roboto", sans-serif;
   --font-secondary: "Arimo", sans-serif;
+  --font-size-default: 1.6rem;
+  --font-weight-default: 400;
+  --line-height-default: 1.5;
   /* Length values */
+  --max-width: 100%;
+  --indent-default: 16px;
   /* Other values */
 }
 
@@ -19,6 +32,13 @@
   BASE
 ==============================
 */
+body {
+  font-family: var(--font-main);
+  font-size: var(--font-size-default);
+  font-weight: var(--font-weight-default);
+  line-height: var(--line-height-default);
+  color: var(--blue);
+}
 
 /* 
 ==============================
