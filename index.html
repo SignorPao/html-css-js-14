@@ -49,7 +49,7 @@
       href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
       rel="stylesheet"
     />
-    
+
     <meta
       name="title"
       content="Book tickets online now and fly out into the world"
@@ -77,11 +77,67 @@
   <body>
     <header id="header">
       <nav class="mobile__header">
-        <div class="mobile__header-logo">
-          <a href="#">logo</a>
+        <div class="mobile__header-container">
+          <div class="mobile__header-logo">
+            <a href="#">logo</a>
+          </div>
+
+          <div class="mobile__header-buttons">
+            <button id="login">login</button>
+            <button id="help">help</button>
+            <button id="burger">burger</button>
+          </div>
         </div>
 
-        <div class="mobile__header-buttons"></div>
+        <div class="mobile__menu">
+          <ul class="mobile__menu-list">
+            <li>
+              <a href="#!">Book & Prepare</a>
+              <ul class="mobile__submenu-list">
+                <li>
+                  <a href="#!">Flights</a>
+                </li>
+                <li>
+                  <a href="#!">Travel information</a>
+                </li>
+                <li>
+                  <a href="#!">Special requests</a>
+                </li>
+              </ul>
+            </li>
+            
+            <li>
+              <a href="#!">My bookings</a>
+              <ul class="mobile__submenu-list">
+                <li>
+                  <a href="#!">Manage</a>
+                </li>
+                <li>
+                  <a href="#!">Extra services</a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#!">Discover Lufthansa</a>
+              <ul class="mobile__submenu-list">
+                <li>
+                  <a href="#!">Travel classes</a>
+                </li>
+                <li>
+                  <a href="#!">Services on board</a>
+                </li>
+                <li>
+                  <a href="#!">Lufthansa Insights</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <div class="language__selector">
+            <button>US-EN</button>
+          </div>
+        </div>
       </nav>
 
       <nav class="pc__header"></nav>
@@ -90,6 +146,7 @@
     <main></main>
 
     <footer></footer>
+
     <!-- JS Scripts -->
     <script async src="/assets/js/main.js"></script>
     <noscript>
