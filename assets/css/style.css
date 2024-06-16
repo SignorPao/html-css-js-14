@@ -22,8 +22,9 @@
   --font-weight-default: 400;
   --line-height-default: 1.5;
   /* Length values */
-  --max-width: 100%;
+  --max-width: 1440px;
   --indent-default: 16px;
+  --padding-inline: calc(var(--indent-default) * 1.5);
   /* Other values */
 }
 
@@ -45,12 +46,44 @@ body {
   REUSABLE CLASSES
 ==============================
 */
+.wrapper {
+  width: min(100%, var(--max-width));
+  margin-inline: auto;
+}
 
 /* 
 ==============================
   HEADER
 ==============================
 */
+header {
+}
+
+/* Mobile Navigation */
+.mobile__header {
+}
+
+.mobile__header-container {
+  background-color: var(--blue);
+  color: var(--white);
+  padding-inline: var(--padding-inline);
+}
+.mobile__header-logo {
+}
+.mobile__header-buttons {
+}
+
+.mobile__menu {
+  background-color: var(--white);
+  padding-inline: var(--padding-inline);
+}
+
+.mobile__menu-list {
+}
+.mobile__submenu-list {
+}
+.language__selector {
+}
 
 /* 
 ==============================
