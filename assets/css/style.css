@@ -64,13 +64,43 @@ header {
 }
 
 .mobile__header-container {
+  height: 60px;
   background-color: var(--blue);
   color: var(--white);
   padding-inline: var(--padding-inline);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
 .mobile__header-logo {
+  color: var(--white);
 }
+
+.logo {
+  width: 164px;
+  height: 28px;
+}
+
+button#login {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login {
+  width: 12px;
+  height: 12px;
+  color: var(--blue);
+}
+
 .mobile__header-buttons {
+  display: flex;
+  gap: var(--indent-default);
 }
 
 .mobile__menu {
