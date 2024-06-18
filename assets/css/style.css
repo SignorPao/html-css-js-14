@@ -15,6 +15,7 @@
   --gray-blue: #7d899d;
   --gray-blue-2: #52627c;
   --light-gray: #f5f5f5;
+  --light-gray-2: #e0e0e0;
   /* Fonts & Typography */
   --font-main: "Roboto", sans-serif;
   --font-secondary: "Arimo", sans-serif;
@@ -26,6 +27,8 @@
   --indent-default: 16px;
   --padding-inline: calc(var(--indent-default) * 1.5);
   /* Other values */
+  --transition: 300ms ease-in;
+  --transition-fast: 150ms ease-in;
 }
 
 /* 
@@ -82,25 +85,41 @@ header {
   height: 28px;
 }
 
-button#login {
+.mobile__header-buttons {
+  display: flex;
+  gap: var(--indent-default);
+}
+
+.mobile__header-buttons button {
   width: 22px;
   height: 22px;
+  transition: all var(--transition-fast);
+}
+
+button#login {
   border-radius: 50%;
-  background-color: var(--white);
+  background-color: var(--light-gray-2);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+button#login:hover {
+  background-color: var(--white);
+}
+
 .login {
-  width: 12px;
-  height: 12px;
+  width: 11px;
+  height: 11px;
   color: var(--blue);
 }
 
-.mobile__header-buttons {
-  display: flex;
-  gap: var(--indent-default);
+button#help {
+  color: var(--light-gray-2);
+}
+
+button#help:hover {
+  color: var(--white);
 }
 
 .mobile__menu {
