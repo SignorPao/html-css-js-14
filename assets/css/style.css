@@ -87,7 +87,7 @@ header {
 
 .mobile__header-buttons {
   display: flex;
-  gap: var(--indent-default);
+  gap: calc(var(--indent-default) * 1.5);
 }
 
 .mobile__header-buttons button {
@@ -114,16 +114,28 @@ button#login:hover {
   color: var(--blue);
 }
 
-button#help {
+button#help,
+button#burger {
   color: var(--light-gray-2);
 }
 
-button#help:hover {
+button#help:hover,
+button#burger:hover {
   color: var(--white);
 }
 
+button#burger .close {
+  display: none;
+}
+
 .mobile__menu {
-  background-color: var(--white);
+  width: min(100%, 400px);
+  min-height: calc(100vh - 60px);
+  position: absolute;
+  right: 0;
+  top: 60px;
+  bottom: 0;
+  background-color: var(--light-gray);
   padding-inline: var(--padding-inline);
 }
 
