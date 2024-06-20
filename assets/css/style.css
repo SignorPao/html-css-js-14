@@ -124,20 +124,37 @@ button#burger:hover {
   color: var(--white);
 }
 
-button#burger .close {
-  display: none;
+.close {
+  /* display: none; */
 }
 
 .mobile__menu {
   width: min(100%, 400px);
   min-height: calc(100vh - 60px);
-  position: absolute;
+  /* position: absolute; */
+  position: fixed;
   right: 0;
   top: 60px;
   bottom: 0;
   background-color: var(--light-gray);
   padding-inline: var(--padding-inline);
+  will-change: transform;
+  transform: translateX(100%);
+  transition: transform var(--transition);
+  overflow-y: scroll;
 }
+
+.mobile__menu.active {
+  transform: translateX(0);
+}
+
+/* .mobile__menu.active .burger {
+  display: none;
+}
+
+.mobile__menu.active .close {
+  display: block;
+} */
 
 .mobile__menu-list {
 }
