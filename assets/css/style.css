@@ -29,6 +29,9 @@
   /* Other values */
   --transition: 300ms ease-in;
   --transition-fast: 150ms ease-in;
+  --z-header: 3;
+  --z-mobile-menu: 2;
+  --z-overlay: 1;
 }
 
 /* 
@@ -44,6 +47,10 @@ body {
   color: var(--blue);
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 /* 
 ==============================
   REUSABLE CLASSES
@@ -53,6 +60,22 @@ body {
   width: min(100%, var(--max-width));
   margin-inline: auto;
 }
+
+/* body overlay */
+.overlay__body {
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: var(--z-overlay);
+}
+
+.overlay__body.active {
+  position: fixed;
+  height: 100vh;
+  background-color: var(--gray);
+  /* opacity: 0.8; */
+}
+/* end body overlay */
 
 /* 
 ==============================
@@ -74,6 +97,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  z-index: var(--z-header);
 }
 
 .mobile__header-logo {
@@ -124,10 +149,6 @@ button#burger:hover {
   color: var(--white);
 }
 
-.close {
-  /* display: none; */
-}
-
 .mobile__menu {
   width: min(100%, 400px);
   min-height: calc(100vh - 60px);
@@ -142,19 +163,12 @@ button#burger:hover {
   transform: translateX(100%);
   transition: transform var(--transition);
   overflow-y: scroll;
+  z-index: var(--z-mobile-menu);
 }
 
 .mobile__menu.active {
   transform: translateX(0);
 }
-
-/* .mobile__menu.active .burger {
-  display: none;
-}
-
-.mobile__menu.active .close {
-  display: block;
-} */
 
 .mobile__menu-list {
 }
@@ -162,18 +176,33 @@ button#burger:hover {
 }
 .language__selector {
 }
+/* End Mobile Navigation */
+
+/* PC Navigation */
+
+/* End PC Navigation */
 
 /* 
 ==============================
   MAIN
 ==============================
 */
+main {
+  width: 100%;
+  height: 2000px;
+  background-color: var(--gray-blue);
+}
 
 /* 
 ==============================
 FOOTER
 ==============================
 */
+footer {
+  width: 100%;
+  height: 500px;
+  background-color: var(--blue-2);
+}
 
 /* 
 ==============================
