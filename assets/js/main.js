@@ -18,3 +18,34 @@ burgerButton.addEventListener("click", () => {
         .querySelector(".burger use")
         .setAttribute("href", "/assets/icons/burger.svg#burger");
 });
+
+// show / hide header on scroll effect
+// let prevScrollpos = window.scrollY,
+//   headerDiv = document.querySelector("header"),
+//   headerBottom = headerDiv.offsetTop + headerDiv.offsetHeight;
+
+// window.onscroll = function () {
+//   var currentScrollPos = window.scrollY;
+//   if (prevScrollpos <= currentScrollPos) {
+//     headerDiv.classList.remove("fixedToTop");
+//     headerDiv.style.top = "-60px";
+//   } else {
+//     headerDiv.classList.add("fixedToTop");
+//     headerDiv.style.top = "0";
+//   }
+//   prevScrollpos = currentScrollPos;
+// };
+
+let prevScrollpos = window.scrollY,
+  headerDiv = document.querySelector("header"),
+  headerBottom = headerDiv.offsetTop + headerDiv.offsetHeight;
+
+window.onscroll = function () {
+  var currentScrollPos = window.scrollY;
+  if (prevScrollpos > currentScrollPos || currentScrollPos < headerBottom) {
+    headerDiv.style.top = "0";
+  } else {
+    headerDiv.style.top = "-60px";
+  }
+  prevScrollpos = currentScrollPos;
+};
