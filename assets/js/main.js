@@ -20,22 +20,6 @@ burgerButton.addEventListener("click", () => {
 });
 
 // show / hide header on scroll effect
-// let prevScrollpos = window.scrollY,
-//   headerDiv = document.querySelector("header"),
-//   headerBottom = headerDiv.offsetTop + headerDiv.offsetHeight;
-
-// window.onscroll = function () {
-//   var currentScrollPos = window.scrollY;
-//   if (prevScrollpos <= currentScrollPos) {
-//     headerDiv.classList.remove("fixedToTop");
-//     headerDiv.style.top = "-60px";
-//   } else {
-//     headerDiv.classList.add("fixedToTop");
-//     headerDiv.style.top = "0";
-//   }
-//   prevScrollpos = currentScrollPos;
-// };
-
 let prevScrollpos = window.scrollY,
   headerDiv = document.querySelector("header"),
   headerBottom = headerDiv.offsetTop + headerDiv.offsetHeight;
@@ -49,3 +33,11 @@ window.onscroll = function () {
   }
   prevScrollpos = currentScrollPos;
 };
+
+// mobile menu accordion
+let accordion = document.querySelectorAll(".mobile__menu-link");
+for (let i = 0; i < accordion.length; i++) {
+  accordion[i].addEventListener("click", function() {
+    this.classList.toggle("show");
+  });
+}

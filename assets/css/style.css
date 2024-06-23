@@ -188,8 +188,17 @@ button#burger:hover {
 
 .mobile__menu-list {
 }
+
 .mobile__submenu-list {
+  height: 0;
+  overflow: hidden;
 }
+
+.mobile__menu-link.show .mobile__submenu-list {
+  height: auto;
+  padding-block: 1rem;
+}
+
 .language__selector {
 }
 /* End Mobile Navigation */
