@@ -187,14 +187,21 @@ button#burger:hover {
 }
 
 .mobile__menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--indent-default);
+  padding-block: var(--indent-default);
 }
 
 .mobile__submenu-list {
   height: 0;
   overflow: hidden;
+  padding-block: 0;
+  padding-inline-start: var(--indent-default);
+  transition: all 100ms ease-in-out;
 }
 
-.mobile__menu-link.show .mobile__submenu-list {
+.mobile__submenu-list.show {
   height: auto;
   padding-block: 1rem;
 }
