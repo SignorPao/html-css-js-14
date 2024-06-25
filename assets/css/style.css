@@ -174,7 +174,6 @@ button#burger:hover {
   top: 60px;
   bottom: 0;
   background-color: var(--light-gray);
-  padding-inline: var(--padding-inline);
   will-change: transform;
   transform: translateX(100%);
   transition: transform var(--transition);
@@ -189,17 +188,26 @@ button#burger:hover {
 .mobile__menu-list {
   display: flex;
   flex-direction: column;
-  gap: var(--indent-default);
+  gap: 0;
   padding-block: var(--indent-default);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.mobile__menu-link {
+  width: 100%;
+  padding-inline: var(--padding-inline);
+  padding-block: var(--indent-default);
+  border-block-end: thin solid var(--light-gray-2);
 }
 
 .mobile__submenu-list {
   opacity: 0;
-  /* font-size: 0; */git 
+  /* font-size: 0; */
   height: 0;
   /* overflow: hidden; */
   padding-block: 0;
-  padding-inline-start: var(--indent-default);
+  padding-inline-start: calc(var(--padding-inline) * 1.5);
   transition: 50ms ease;
 }
 
