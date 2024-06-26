@@ -196,25 +196,26 @@ button#burger:hover {
 
 .mobile__menu-link {
   width: 100%;
+  height: 100%;
   padding-inline: var(--padding-inline);
   padding-block: var(--indent-default);
   border-block-end: thin solid var(--light-gray-2);
 }
 
 .mobile__submenu-list {
-  opacity: 0;
+  /* opacity: 0; */
   /* font-size: 0; */
   height: 0;
-  /* overflow: hidden; */
+  overflow: hidden;
   padding-block: 0;
   padding-inline-start: calc(var(--padding-inline) * 1.5);
-  transition: 50ms ease;
+  transition: all 150ms ease;
 }
 
 .mobile__submenu-list.show {
   height: auto;
   padding-block: 1rem;
-  opacity: 1;
+  /* opacity: 1; */
   /* font-size: inherit; */
 }
 
