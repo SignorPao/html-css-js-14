@@ -37,7 +37,8 @@ window.onscroll = function () {
 // mobile menu accordion
 let accordion = document.getElementsByClassName("mobile__menu-link");
 for (let i = 0; i < accordion.length; i++) {
-  accordion[i].addEventListener("click", function() {
+  accordion[i].addEventListener("click", function () {
     this.nextElementSibling.classList.toggle("show");
+    this.classList.toggle("show-menu");
   });
 }
