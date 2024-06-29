@@ -22,6 +22,7 @@
   --font-secondary: "Arimo", sans-serif;
   --font-size-default: 1.6rem;
   --font-weight-default: 400;
+  --font-weight-medium: 500;
   --line-height-default: 1.5;
   /* Length values */
   --max-width: 1440px;
@@ -212,8 +213,8 @@ button#burger:hover {
 }
 
 .arrow {
-  width: 16px;
-  height: 14px;
+  width: 14px;
+  height: 12px;
   /* position: relative; */
 }
 
@@ -249,7 +250,28 @@ button#burger:hover {
   /* font-size: inherit; */
 }
 
-.language__selector {
+.language__selector{
+  margin-block-end: var(--indent-default);
+}
+
+.language__selector button {
+  padding-inline-start: var(--padding-inline);
+  color: var(--gray-blue-2);
+  font-weight: var(--font-weight-medium);
+  font-size: 1.7rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: color var(--transition);
+}
+
+.language__selector button:hover{
+  color: var(--blue-2);
+}
+
+.globe{
+  width: 22px;
+  height: 22px;
 }
 /* End Mobile Navigation */
 
