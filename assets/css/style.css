@@ -75,7 +75,6 @@ body.lock {
   position: fixed;
   height: 100vh;
   background-color: var(--gray);
-  /* opacity: 0.8; */
 }
 /* end body overlay */
 
@@ -86,7 +85,6 @@ body.lock {
 */
 header {
   background-color: var(--blue);
-  /* position: relative; */
   z-index: var(--z-header);
   height: 60px;
   transition: top 300ms ease-in-out;
@@ -96,21 +94,12 @@ header {
   right: 0;
 }
 
-/* header.fixedToTop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-} */
-
 /* Mobile Navigation */
 .mobile__header {
   height: 100%;
 }
 
 .mobile__header-container {
-  /* position: relative; */
-  /* height: 60px; */
   height: 100%;
   color: var(--white);
   padding-inline: var(--padding-inline);
@@ -175,7 +164,6 @@ button#burger:hover {
 .mobile__menu {
   width: min(100%, 400px);
   min-height: calc(100vh - 60px);
-  /* position: absolute; */
   position: fixed;
   right: 0;
   top: 60px;
@@ -215,7 +203,6 @@ button#burger:hover {
 .arrow {
   width: 14px;
   height: 12px;
-  /* position: relative; */
 }
 
 .mobile__menu-link.show-menu .arrow {
@@ -224,8 +211,6 @@ button#burger:hover {
 }
 
 .mobile__submenu-list {
-  /* opacity: 0; */
-  /* font-size: 0; */
   height: 0;
   overflow: hidden;
   padding-block: 0;
@@ -246,8 +231,6 @@ button#burger:hover {
 .mobile__submenu-list.show {
   height: auto;
   padding-block: 1rem;
-  /* opacity: 1; */
-  /* font-size: inherit; */
 }
 
 .language__selector{

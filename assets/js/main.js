@@ -17,6 +17,18 @@ burgerButton.addEventListener("click", () => {
     : document
         .querySelector(".burger use")
         .setAttribute("href", "/assets/icons/burger.svg#burger");
+
+  // close all sublists
+  if (!mobileMenu.classList.contains("active")) {
+    console.log("not");
+    let subLists = document.querySelectorAll(".mobile__submenu-list");
+    for (let i = 0; i < subLists.length; i++) {
+      subLists[i].classList.remove("show");
+    }
+    for (let i = 0; i < accordion.length; i++) {
+      accordion[i].classList.remove("show-menu");
+    }
+  }
 });
 
 // show / hide header on scroll effect
