@@ -28,6 +28,7 @@
   --max-width: 1440px;
   --indent-default: 16px;
   --padding-inline: calc(var(--indent-default) * 1.5);
+  --padding-inline-wide: 80px;
   /* Other values */
   --transition: 300ms ease-in;
   --transition-fast: 150ms ease-in;
@@ -233,7 +234,7 @@ button#burger:hover {
   padding-block: 1rem;
 }
 
-.language__selector{
+.language__selector {
   margin-block-end: var(--indent-default);
 }
 
@@ -248,18 +249,20 @@ button#burger:hover {
   transition: color var(--transition);
 }
 
-.language__selector button:hover{
+.language__selector button:hover {
   color: var(--blue-2);
 }
 
-.globe{
+.globe {
   width: 22px;
   height: 22px;
 }
 /* End Mobile Navigation */
 
 /* PC Navigation */
-
+.pc__header {
+  display: none;
+}
 /* End PC Navigation */
 
 /* 
@@ -289,3 +292,32 @@ footer {
   MEDIA QUERIES
 ==============================
 */
+@media (min-width: 1024px) {
+  header {
+    height: 120px;
+  }
+
+  .mobile__header {
+    display: none;
+  }
+
+  .pc__header {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--white);
+    padding: calc(var(--indent-default) * 1.5) var(--padding-inline-wide);
+  }
+
+  .pc__header-top {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+
+  .pc__header-bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+}

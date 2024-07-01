@@ -37,11 +37,11 @@ let prevScrollpos = window.scrollY,
   headerBottom = headerDiv.offsetTop + headerDiv.offsetHeight;
 
 window.onscroll = function () {
-  var currentScrollPos = window.scrollY;
+  let currentScrollPos = window.scrollY;
   if (prevScrollpos > currentScrollPos || currentScrollPos < headerBottom) {
     headerDiv.style.top = "0";
   } else {
-    headerDiv.style.top = "-60px";
+    headerDiv.style.top = "-120px";
   }
   prevScrollpos = currentScrollPos;
 };
