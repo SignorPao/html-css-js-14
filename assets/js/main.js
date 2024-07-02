@@ -31,21 +31,6 @@ burgerButton.addEventListener("click", () => {
   }
 });
 
-// show / hide header on scroll effect
-let prevScrollpos = window.scrollY,
-  headerDiv = document.querySelector("header"),
-  headerBottom = headerDiv.offsetTop + headerDiv.offsetHeight;
-
-window.onscroll = function () {
-  let currentScrollPos = window.scrollY;
-  if (prevScrollpos > currentScrollPos || currentScrollPos < headerBottom) {
-    headerDiv.style.top = "0";
-  } else {
-    headerDiv.style.top = "-120px";
-  }
-  prevScrollpos = currentScrollPos;
-};
-
 // mobile menu accordion
 let accordion = document.getElementsByClassName("mobile__menu-link");
 for (let i = 0; i < accordion.length; i++) {
@@ -54,3 +39,32 @@ for (let i = 0; i < accordion.length; i++) {
     this.classList.toggle("show-menu");
   });
 }
+
+// show / hide header on scroll effect
+// let prevScrollpos = window.scrollY,
+//   headerDiv = document.getElementsByTagName("header"),
+//   headerBottom = headerDiv.offsetTop + headerDiv.offsetHeight;
+
+// window.onscroll = () => {
+//   let currentScrollPos = window.scrollY;
+//   if (prevScrollpos > currentScrollPos || currentScrollPos < headerBottom) {
+//     headerDiv.style.top = "0";
+//   } else {
+//     headerDiv.style.top = "-60px";
+//   }
+//   prevScrollpos = currentScrollPos;
+// };
+
+let prevScrollpos = window.scrollY,
+  headerDiv = document.querySelector("header"),
+  headerBottom = headerDiv.offsetTop + headerDiv.offsetHeight;
+
+window.onscroll = function () {
+  var currentScrollPos = window.scrollY;
+  if (prevScrollpos > currentScrollPos || currentScrollPos < headerBottom) {
+    headerDiv.style.top = "0";
+  } else {
+    headerDiv.style.top = "-120px";
+  }
+  prevScrollpos = currentScrollPos;
+};
