@@ -20,7 +20,6 @@ burgerButton.addEventListener("click", () => {
 
   // close all sublists
   if (!mobileMenu.classList.contains("active")) {
-    console.log("not");
     let subLists = document.querySelectorAll(".mobile__submenu-list");
     for (let i = 0; i < subLists.length; i++) {
       subLists[i].classList.remove("show");
@@ -45,7 +44,7 @@ for (let i = 0; i < accordion.length; i++) {
 //   headerDiv = document.getElementsByTagName("header"),
 //   headerBottom = headerDiv.offsetTop + headerDiv.offsetHeight;
 
-// window.onscroll = () => {
+// document.body.addEventListener("scroll", () => {
 //   let currentScrollPos = window.scrollY;
 //   if (prevScrollpos > currentScrollPos || currentScrollPos < headerBottom) {
 //     headerDiv.style.top = "0";
@@ -53,18 +52,39 @@ for (let i = 0; i < accordion.length; i++) {
 //     headerDiv.style.top = "-60px";
 //   }
 //   prevScrollpos = currentScrollPos;
+// });
+// window.onscroll = () => {};
+
+// let prevScrollpos = window.scrollY,
+//   headerDiv = document.querySelector("header"),
+//   headerBottom = headerDiv.offsetTop + headerDiv.offsetHeight;
+
+// console.log(prevScrollpos);
+
+// window.onscroll = function() {
+//   console.log('move');
+//   var currentScrollPos = window.scrollY;
+//   if (prevScrollpos > currentScrollPos || currentScrollPos < headerBottom) {
+//     headerDiv.style.top = "0";
+//   } else {
+//     headerDiv.style.top = "-120px";
+//   }
+//   prevScrollpos = currentScrollPos;
 // };
 
-let prevScrollpos = window.scrollY,
-  headerDiv = document.querySelector("header"),
-  headerBottom = headerDiv.offsetTop + headerDiv.offsetHeight;
+var prevScrollpos = window.pageYOffset; // save the current position
+/* Get the header element and it's position */
+// var headerDiv = document.querySelector("header");
+// var headerBottom = headerDiv.offsetTop + headerDiv.offsetHeight;
 
 window.onscroll = function () {
-  var currentScrollPos = window.scrollY;
-  if (prevScrollpos > currentScrollPos || currentScrollPos < headerBottom) {
-    headerDiv.style.top = "0";
-  } else {
-    headerDiv.style.top = "-120px";
+  var currentScrollPos = window.pageYOffset;
+
+  if (prevScrollpos > currentScrollPos) {
+    document.querySelector("header").style.top = "0";
+  } else if (currentScrollPos > document.querySelector("header").offsetHeight) {
+    document.querySelector("header").style.top = "-120px";
   }
+
   prevScrollpos = currentScrollPos;
 };

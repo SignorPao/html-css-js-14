@@ -86,13 +86,13 @@ body.lock {
 */
 header {
   background-color: var(--blue);
-  z-index: var(--z-header);
   height: 60px;
-  transition: top 300ms ease-in-out;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  z-index: var(--z-header);
+  transition: top 300ms ease-in-out;
 }
 
 /* Mobile Navigation */
