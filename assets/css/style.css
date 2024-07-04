@@ -320,4 +320,10 @@ footer {
     display: flex;
     justify-content: space-between;
   }
+
+  
+.logo-pc {
+  width: 222px;
+  height: 38px;
+}
 }
