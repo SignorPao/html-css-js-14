@@ -315,15 +315,23 @@ footer {
     justify-content: flex-end;
   }
 
-
   .pc__header-bottom {
     display: flex;
     justify-content: space-between;
+    align-items: end;
   }
 
-  
-.logo-pc {
-  width: 222px;
-  height: 38px;
-}
+  .pc__header-logo a{
+    height: 38px;
+  }
+
+  .logo-pc {
+    width: 222px;
+    height: 38px;
+  }
+
+  .pc__header-menu {
+    display: flex;
+    gap: calc(var(--indent-default) * 2);
+  }
 }
