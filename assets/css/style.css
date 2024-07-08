@@ -21,11 +21,14 @@
   --font-main: "Roboto", sans-serif;
   --font-secondary: "Arimo", sans-serif;
   --font-size-default: 1.6rem;
-  --font-size-title-secondary: 2rem;
+  --font-size-small: 1.4rem;
+  --font-size-title-secondary: 1.8rem;
   --font-weight-thin: 300;
   --font-weight-default: 400;
   --font-weight-medium: 500;
   --line-height-default: 1.5;
+  --letter-spacing: 1px;
+  --letter-spacing-small: 0.7px;
   /* Length values */
   --max-width: 1440px;
   --indent-default: 16px;
@@ -315,15 +318,17 @@ footer {
   .pc__header-top {
     display: flex;
     justify-content: flex-end;
-    gap: calc(var(--indent-default) * 2);
+    gap: calc(var(--indent-default) * 3);
   }
 
   .pc__header-top a {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     color: var(--light-gray-2);
     font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-small);
+    letter-spacing: var(--letter-spacing-small);
     transition: color var(--transition-fast);
   }
 
@@ -331,7 +336,7 @@ footer {
     color: var(--white);
   }
 
-  .pc__header-top span {
+  .login-pc-wrapper {
     width: 16px;
     height: 16px;
     border-radius: 50%;
@@ -339,12 +344,23 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color var(--transition-fast);
+  }
+
+  .pc__header-top a:hover .login-pc-wrapper {
+    background-color: var(--white);
   }
 
   .login-pc {
     width: 9px;
     height: 9px;
     color: var(--blue);
+  }
+
+  .help-pc,
+  .globe-pc {
+    width: 16px;
+    height: 16px;
   }
 
   .pc__header-bottom {
@@ -368,6 +384,7 @@ footer {
     gap: calc(var(--indent-default) * 2);
     font-size: var(--font-size-title-secondary);
     font-weight: var(--font-weight-thin);
+    letter-spacing: var(--letter-spacing);
   }
 
   .pc__header-menu a {
