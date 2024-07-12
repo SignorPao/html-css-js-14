@@ -350,11 +350,17 @@
       <section class="banner">
         <div class="banner__container">
           <picture class="banner__image">
-            <source />
-            <source />
-            <img src="" alt="" />
+            <source
+              media="(min-width:760px)"
+              srcset="/assets/images/banner-pc.webp"
+            />
+            <source
+              media="(max-width:761px)"
+              srcset="/assets/images/banner-mobile.webp"
+            />
+            <img src="/assets/images/banner-pc.webp" alt="Acropolis, Athens" />
           </picture>
-          
+
           <article class="banner__card">banner card</article>
         </div>
       </section>
