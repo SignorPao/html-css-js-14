@@ -40,45 +40,10 @@ for (let i = 0; i < accordion.length; i++) {
 }
 
 // show / hide header on scroll effect
-// let prevScrollpos = window.scrollY,
-//   headerDiv = document.getElementsByTagName("header"),
-//   headerBottom = headerDiv.offsetTop + headerDiv.offsetHeight;
-
-// document.body.addEventListener("scroll", () => {
-//   let currentScrollPos = window.scrollY;
-//   if (prevScrollpos > currentScrollPos || currentScrollPos < headerBottom) {
-//     headerDiv.style.top = "0";
-//   } else {
-//     headerDiv.style.top = "-60px";
-//   }
-//   prevScrollpos = currentScrollPos;
-// });
-// window.onscroll = () => {};
-
-// let prevScrollpos = window.scrollY,
-//   headerDiv = document.querySelector("header"),
-//   headerBottom = headerDiv.offsetTop + headerDiv.offsetHeight;
-
-// console.log(prevScrollpos);
-
-// window.onscroll = function() {
-//   console.log('move');
-//   var currentScrollPos = window.scrollY;
-//   if (prevScrollpos > currentScrollPos || currentScrollPos < headerBottom) {
-//     headerDiv.style.top = "0";
-//   } else {
-//     headerDiv.style.top = "-120px";
-//   }
-//   prevScrollpos = currentScrollPos;
-// };
-
-var prevScrollpos = window.pageYOffset; // save the current position
-/* Get the header element and it's position */
-// var headerDiv = document.querySelector("header");
-// var headerBottom = headerDiv.offsetTop + headerDiv.offsetHeight;
+let prevScrollpos = window.scrollY;
 
 window.onscroll = function () {
-  var currentScrollPos = window.pageYOffset;
+  let currentScrollPos = window.scrollY;
 
   if (prevScrollpos > currentScrollPos) {
     document.querySelector("header").style.top = "0";

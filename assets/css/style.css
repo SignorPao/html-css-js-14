@@ -279,6 +279,7 @@ main {
   width: 100%;
   height: 2000px;
   background-color: var(--gray-blue);
+  margin-block-start: 60px;
 }
 
 /* 
