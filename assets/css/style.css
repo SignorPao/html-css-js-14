@@ -279,7 +279,28 @@ main {
   width: 100%;
   height: 2000px;
   background-color: var(--gray-blue);
-  margin-block-start: 60px;
+  margin-block-start: 2px;
+}
+
+.banner {
+  width: 100%;
+  height: 645px;
+}
+
+.banner__container {
+  width: 100%;
+  height: 100%;
+}
+
+.banner__image {
+  width: 100%;
+  max-height: 100%;
+}
+
+.banner__image img {
+  width: 100%;
+  max-height: 100%;
+  object-fit: cover;
 }
 
 /* 
