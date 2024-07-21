@@ -307,11 +307,15 @@ main {
 .banner__card {
   position: absolute;
   top: 80px;
-  /* left: 0; */
+  left: 50%;
+  transform: translateX(-50%);
   margin-inline: auto;
-  width: 80%;
+  width: 88%;
   height: 600px;
+  border-radius: 3px;
   background-color: var(--white);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
 }
 
 /* 
