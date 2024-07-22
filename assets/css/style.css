@@ -310,8 +310,8 @@ main {
   left: 50%;
   transform: translateX(-50%);
   margin-inline: auto;
-  width: 88%;
-  height: 600px;
+  width: 89%;
+  height: 615px;
   border-radius: 3px;
   background-color: var(--white);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
