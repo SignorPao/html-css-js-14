@@ -331,6 +331,19 @@ main {
   border-bottom: thin solid var(--light-gray-3);
 }
 
+.banner__card-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.plane {
+  transform: rotate(45deg);
+}
+
+.banner__card-text {
+  display: none;
+}
+
 /* 
 ==============================
 FOOTER
