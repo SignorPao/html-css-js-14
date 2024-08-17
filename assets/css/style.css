@@ -277,25 +277,17 @@ button#burger:hover {
 */
 main {
   width: 100%;
-  /* height: 2000px; */
-  /* background-color: var(--gray-blue); */
   margin-block-start: 2px;
 }
 
 .banner {
-  /* width: 100%; */
-  /* height: 645px; */
 }
 
 .banner__container {
-  /* width: 100%; */
-  /* height: 100%; */
   position: relative;
 }
 
 .banner__image {
-  /* width: 100%; */
-  /* max-height: 100%; */
 }
 
 .banner__image img {
@@ -328,7 +320,6 @@ main {
 .banner__card-icons {
   width: 100%;
   height: 62px;
-  /* height: 100%; */
   padding-block: 0;
   border-bottom: thin solid var(--light-gray-3);
   display: flex;
@@ -346,8 +337,6 @@ main {
 }
 
 .banner__card-icon {
-  /* width: 20px; */
-  /* height: 20px; */
   color: var(--gray);
   transition: color var(--transition-fast);
 }
@@ -394,17 +383,13 @@ footer {
 */
 @media (min-width: 510px) {
   .banner__image img {
-    /* width: 100%; */
     height: 590px;
-    /* object-fit: cover; */
   }
 }
 
 @media (min-width: 760px) {
   .banner__image img {
-    /* width: 100%; */
     height: 500px;
-    /* object-fit: cover; */
   }
 }
 @media (min-width: 1024px) {
@@ -499,7 +484,6 @@ footer {
 
   .pc__header-menu a {
     color: var(--light-gray-2);
-    /* transition: var(--transition-fast); */
   }
 
   .pc__header-menu a:hover {
