@@ -326,6 +326,18 @@ main {
   align-items: center;
   justify-content: space-between;
   gap: var(--indent-default);
+  position: relative;
+}
+
+.progress {
+  width: calc((100% - (var(--indent-default) * 4)) / 3);
+  height: 4px;
+  position: absolute;
+  bottom: 0;
+  background-color: var(--blue);
+  pointer-events: none;
+  transition: all var(--transition);
+  z-index: 1;
 }
 
 .banner__card-icons a {

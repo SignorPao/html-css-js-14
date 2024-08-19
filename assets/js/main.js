@@ -50,6 +50,5 @@ window.onscroll = function () {
   } else if (currentScrollPos > document.querySelector("header").offsetHeight) {
     document.querySelector("header").style.top = "-120px";
   }
-
   prevScrollpos = currentScrollPos;
 };
