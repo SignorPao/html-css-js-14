@@ -311,7 +311,7 @@ main {
 }
 
 .banner__card-icons,
-.banner__card-trip,
+.banner__card-options,
 .banner__card-search,
 .banner__card-redeem {
   padding: var(--indent-default);
