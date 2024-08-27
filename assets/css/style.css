@@ -378,6 +378,24 @@ main {
   display: none;
 }
 
+.banner__card-wrapper {
+  width: 100%;
+  height: calc(100% - 62px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-block-start: var(--indent-default);
+  padding-block-end: calc(var(--indent-default) * 2);
+}
+
+.banner__card-search {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 /* 
 ==============================
 FOOTER
