@@ -27,6 +27,12 @@
   text-shadow: none;
 }
 
+input:focus{
+  box-shadow: none;
+  border: none;
+  outline: none;
+}
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;

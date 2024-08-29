@@ -422,26 +422,48 @@
 
               <!-- Banner card search form -->
               <form class="banner__card-search">
-                <div>
+                <div class="input__wrapper">
+                  <input
+                    type="text"
+                    name="from"
+                    id="from"
+                    value="New York"
+                    autofocus
+                  />
                   <label for="from">From</label>
-                  <input type="text" name="from" id="from" value="New York" />
                 </div>
 
-                <div>
-                  <label for="to">To</label>
+                <svg class="swap-pc" width="" height="">
+                  <use
+                    xlink:href="/assets/icons/swap.svg#swap"
+                    width="100%"
+                    height="100%"
+                  ></use>
+                </svg>
+
+                <div class="input__wrapper">
                   <input type="text" name="to" id="to" />
+                  <label for="to">To</label>
+                  <svg class="swap-mobile" width="" height="">
+                    <use
+                      xlink:href="/assets/icons/arrows-swap.svg#swap"
+                      width="100%"
+                      height="100%"
+                    ></use>
+                  </svg>
                 </div>
 
-                <div>
-                  <input type="date" name="" id="" />
+                <div class="input__wrapper-date">
+                  <input type="date" name="date" id="date" />
+                  <label for="date">Departure - Return</label>
                 </div>
 
                 <ul class="mobile__options">
                   <li>
                     <a href="#!">
-                      <svg class="arrow" width="" height="">
+                      <svg class="" width="" height="">
                         <use
-                          xlink:href="/assets/icons/arrow.svg#arrow"
+                          xlink:href="/assets/icons/filter.svg#filter"
                           width="100%"
                           height="100%"
                         ></use>
@@ -451,9 +473,9 @@
                   </li>
                   <li>
                     <a href="#!">
-                      <svg class="arrow" width="" height="">
+                      <svg class="" width="" height="">
                         <use
-                          xlink:href="/assets/icons/arrow.svg#arrow"
+                          xlink:href="/assets/icons/check.svg#check"
                           width="100%"
                           height="100%"
                         ></use>
@@ -463,13 +485,13 @@
                   </li>
                 </ul>
 
-                <div>
+                <div class="input__button">
                   <input type="button" value="Search flights" />
                 </div>
               </form>
 
               <!-- Banner card redeem -->
-              <div class="banner__card-redeem">
+              <!-- <div class="banner__card-redeem">
                 <p>Redeem miles for award flights</p>
                 <a href="#!">
                   <svg class="arrow" width="" height="">
@@ -481,7 +503,7 @@
                   </svg>
                   Search award flights
                 </a>
-              </div>
+              </div> -->
             </div>
           </article>
         </div>
