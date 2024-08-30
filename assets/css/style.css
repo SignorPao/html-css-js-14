@@ -27,6 +27,7 @@
   --font-weight-thin: 300;
   --font-weight-default: 400;
   --font-weight-medium: 500;
+  --font-weight-bold: 700;
   --line-height-default: 1.5;
   --letter-spacing: 1px;
   --letter-spacing-small: 0.7px;
@@ -282,6 +283,7 @@ main {
   margin-block-start: 2px;
 }
 
+/* Banner Section */
 .banner {
 }
 
@@ -541,6 +543,19 @@ main {
 .input__button input:hover {
   background-color: var(--yellow-hover);
 }
+/* End Banner Section */
+
+/* Check-in Section */
+.check-in {
+  height: 1000px;
+  font-weight: var(--font-weight-bold);
+}
+
+.check-in__icon {
+  width: 14px;
+  height: 14px;
+}
+/* End Check-in Section */
 
 /* 
 ==============================
@@ -683,7 +698,6 @@ footer {
     flex-direction: column;
     justify-content: space-between;
     color: var(--white);
-    /* padding: calc(var(--indent-default) * 1.5) var(--padding-inline-wide); */
     padding-block: calc(var(--indent-default) * 1.5);
   }
 
@@ -791,5 +805,22 @@ footer {
 
   .input__button {
     width: 25%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .pc__header {
+    width: var(--max-width);
+    margin-inline: auto;
+    padding-inline: var(--padding-inline-wide);
+  }
+
+  .banner {
+    width: var(--max-width);
+    margin-inline: auto;
+  }
+
+  .banner__card {
+    width: 89%;
   }
 }
