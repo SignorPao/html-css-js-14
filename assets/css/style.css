@@ -37,6 +37,7 @@
   --padding-inline: calc(var(--indent-default) * 1.5);
   --padding-inline-wide: 80px;
   --border-radius: 3px;
+  --margin-section: 4rem 2rem;
   /* Other values */
   --transition: 300ms ease-in;
   --transition-fast: 150ms ease-in;
@@ -281,6 +282,11 @@ button#burger:hover {
 main {
   width: 100%;
   margin-block-start: 2px;
+}
+
+section + section {
+  margin-block: var(--margin-section);
+  padding-inline: var(--padding-inline);
 }
 
 /* Banner Section */
@@ -535,7 +541,8 @@ main {
   cursor: pointer;
   padding-block: 11px;
   font-size: var(--font-size-title-secondary);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-secondary);
   color: var(--blue);
   transition: background-color var(--transition);
 }
@@ -547,13 +554,28 @@ main {
 
 /* Check-in Section */
 .check-in {
-  height: 1000px;
   font-weight: var(--font-weight-bold);
 }
 
+.check-in a {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: calc(var(--indent-default) / 2);
+  padding: calc(var(--indent-default) / 2);
+  color: black;
+  font-size: var(--font-size-title-secondary);
+  font-family: var(--font-secondary);
+  border-bottom: thin solid black;
+}
+
 .check-in__icon {
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
+}
+
+.plus {
+  margin-left: auto;
 }
 /* End Check-in Section */
 
@@ -679,6 +701,16 @@ footer {
   .input__button {
     margin-left: auto;
   }
+
+  .check-in ul {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: var(--indent-default);
+  }
+
+  .check-in ul li {
+    flex: calc(50% - var(--indent-default));
+  }
 }
 
 @media (min-width: 1024px) {
@@ -785,7 +817,8 @@ footer {
     margin-block-start: 120px;
   }
 
-  .banner__card {
+  .banner__card,
+  .check-in {
     width: 85%;
   }
 
@@ -805,6 +838,24 @@ footer {
 
   .input__button {
     width: 25%;
+  }
+
+  .check-in {
+    padding-inline: 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --margin-section: 5rem 3rem;
+  }
+
+  .check-in ul {
+    flex-wrap: nowrap;
+  }
+
+  .check-in ul li {
+    flex: calc(25% - var(--indent-default));
   }
 }
 
