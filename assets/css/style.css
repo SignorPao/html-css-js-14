@@ -23,14 +23,17 @@
   --font-secondary: "Arimo", sans-serif;
   --font-size-default: 1.6rem;
   --font-size-small: 1.4rem;
+  --font-size-title-primary: 2.8rem;
   --font-size-title-secondary: 1.8rem;
   --font-weight-thin: 300;
   --font-weight-default: 400;
   --font-weight-medium: 500;
   --font-weight-bold: 700;
+  --font-weight-bolder: 900;
   --line-height-default: 1.5;
   --letter-spacing: 1px;
   --letter-spacing-small: 0.7px;
+  --letter-spacing-smaller: 0.5px;
   /* Length values */
   --max-width: 1440px;
   --indent-default: 16px;
@@ -52,7 +55,7 @@
 ==============================
 */
 body {
-  font-family: var(--font-main);
+  font-family: var(--font-secondary);
   font-size: var(--font-size-default);
   font-weight: var(--font-weight-default);
   line-height: var(--line-height-default);
@@ -622,6 +625,54 @@ section + section {
 }
 /* End Two cards section */
 
+/* Discover section */
+.discover h3 {
+  font-family: var(--font-main);
+  font-size: var(--font-size-title-primary);
+  font-weight: var(--font-weight-thin);
+  margin-block-end: 2rem;
+}
+
+.discover__cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--padding-inline);
+}
+
+.discover__cards-card {
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  transition: all var(--transition);
+}
+
+.discover__cards-card:hover {
+  box-shadow: 0px 8px 26px 0px rgba(0, 0, 0, 0.25);
+}
+
+.discover__card-wrapper {
+}
+.discover__card-img {
+}
+
+.discover__card-txt {
+  padding: 20px var(--indent-default);
+  font-family: var(--font-main);
+}
+
+.discover__card-txt h4 {
+  font-weight: var(--font-weight-bolder);
+  font-size: var(--font-size-title-secondary);
+  margin-block-end: 1rem;
+}
+
+.discover__card-txt p {
+  font-weight: var(--font-weight-thin);
+  letter-spacing: var(--letter-spacing-smaller);
+  line-height: 1.6;
+}
+/* End Discover section */
+
 /* 
 ==============================
 FOOTER
@@ -748,7 +799,7 @@ footer {
   .check-in ul {
     display: flex;
     flex-wrap: wrap;
-    column-gap: var(--indent-default);
+    column-gap: var(--padding-inline);
   }
 
   .check-in ul li {
@@ -757,7 +808,16 @@ footer {
 
   .two-cards {
     flex-direction: row;
-    gap: var(--indent-default);
+    gap: var(--padding-inline);
+  }
+
+  .discover__cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .discover__cards-card {
+    flex: calc(50% - var(--padding-inline));
   }
 }
 
@@ -867,7 +927,8 @@ footer {
 
   .banner__card,
   .check-in,
-  .two-cards {
+  .two-cards,
+  .discover {
     width: 85%;
   }
 
@@ -890,7 +951,8 @@ footer {
   }
 
   .check-in,
-  .two-cards {
+  .two-cards,
+  .discover {
     padding-inline: 0;
   }
 
@@ -904,15 +966,23 @@ footer {
     font-weight: var(--font-weight-bold);
     font-size: 19px;
   }
-  
+
   .two-cards__txt-wrapper h3 {
     font-size: 26px;
+  }
+
+  .discover__cards {
+    flex-wrap: nowrap;
+  }
+
+  .discover__cards-card {
+    flex: calc(25% - var(--padding-inline));
   }
 }
 
 @media (min-width: 1280px) {
   :root {
-    --margin-section: 5rem 3rem;
+    --margin-section: 8rem 3rem;
   }
 
   .check-in ul {
