@@ -40,7 +40,7 @@
   --padding-inline: calc(var(--indent-default) * 1.5);
   --padding-inline-wide: 80px;
   --border-radius: 3px;
-  --margin-section: 4rem 2rem;
+  --margin-section: 6rem 4rem;
   /* Other values */
   --transition: 300ms ease-in;
   --transition-fast: 150ms ease-in;
@@ -673,6 +673,50 @@ section + section {
 }
 /* End Discover section */
 
+/* Three cards section */
+.swiper {
+  margin-bottom: 4rem !important;
+  padding-bottom: 4rem !important;
+}
+
+.swiper-pagination {
+}
+
+.swiper-pagination-bullets {
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--yellow) !important;
+}
+
+.three-cards a {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--indent-default);
+}
+
+.three-cards svg {
+  flex: 30px;
+  width: 24px;
+  height: 24px;
+}
+
+.three-cards-txt {
+  flex: calc(100% - calc(30px + var(--indent-default)));
+}
+
+.three-cards-txt h4 {
+  font-weight: var(--font-weight-bolder);
+  font-size: var(--font-size-title-secondary);
+  margin-block-end: 8px;
+}
+
+.three-cards-pc {
+  display: none;
+}
+/* End Three cards section */
+
 /* 
 ==============================
 FOOTER
@@ -928,7 +972,8 @@ footer {
   .banner__card,
   .check-in,
   .two-cards,
-  .discover {
+  .discover,
+  .three-cards {
     width: 85%;
   }
 
@@ -952,7 +997,8 @@ footer {
 
   .check-in,
   .two-cards,
-  .discover {
+  .discover,
+  .three-cards {
     padding-inline: 0;
   }
 
@@ -978,11 +1024,34 @@ footer {
   .discover__cards-card {
     flex: calc(25% - var(--padding-inline));
   }
+
+  .swiper {
+    display: none !important;
+  }
+
+  .three-cards-pc {
+    display: flex;
+    gap: 5%;
+  }
+
+  .three-cards-pc article {
+    flex: 30%;
+  }
+
+  .three-cards svg {
+    flex: 40px;
+    width: 34px;
+    height: 34px;
+  }
+  
+  .three-cards-txt {
+    flex: calc(100% - calc(40px + var(--indent-default)));
+  }
 }
 
 @media (min-width: 1280px) {
   :root {
-    --margin-section: 8rem 3rem;
+    --margin-section: 8rem 4rem;
   }
 
   .check-in ul {

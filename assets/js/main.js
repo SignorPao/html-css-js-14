@@ -52,3 +52,14 @@ window.onscroll = function () {
   }
   prevScrollpos = currentScrollPos;
 };
+
+// three cards swiper slider
+const swiper = new Swiper(".swiper", {
+  direction: "horizontal",
+  loop: false,
+  slidesPerView: 1,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
