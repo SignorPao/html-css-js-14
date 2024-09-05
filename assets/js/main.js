@@ -74,4 +74,13 @@ const offers_swiper = new Swiper(".offers__swiper", {
     el: ".offers__swiper-pagination",
     clickable: true,
   },
+  breakpoints: {
+    760: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+    },
+  },
 });

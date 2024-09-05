@@ -810,7 +810,7 @@ section + section {
 .offers__disclaimer-btn {
   border: 2px solid var(--blue);
   border-radius: var(--border-radius);
-  padding: 1rem;
+  padding: 1rem 3rem;
   background: var(--white);
   transition: all var(--transition-fast);
   cursor: pointer;
@@ -846,7 +846,7 @@ section + section {
   font-weight: var(--font-weight-thin);
 }
 
-.offers__disclaimer-txt button{
+.offers__disclaimer-txt button {
   display: flex;
   align-items: center;
   gap: calc(var(--indent-default) / 2);
@@ -1007,6 +1007,19 @@ footer {
 
   .discover__cards-card {
     flex: calc(50% - var(--padding-inline));
+  }
+
+  .offers__swiper {
+    padding-inline: var(--padding-inline);
+  }
+
+  .offers__disclaimer {
+    margin-block-start: 1rem;
+  }
+
+  .offers__disclaimer-btn {
+    width: fit-content;
+    align-self: flex-end;
   }
 }
 
@@ -1192,6 +1205,37 @@ footer {
   .three-cards-txt {
     flex: calc(100% - calc(40px + var(--indent-default)));
   }
+
+  .offers__swiper {
+    padding-inline: calc(15% / 2);
+    padding-block-start: 3rem;
+  }
+
+  .offers__swiper .swiper-slide a {
+    padding: 20px 20px 30px 20px;
+  }
+
+  .offers__slide-txt {
+    display: flex;
+    flex-direction: column;
+    gap: var(--indent-default);
+  }
+
+  .offers__tracking,
+  .offers__disclaimer {
+    padding-inline: 0;
+    width: 85%;
+    margin-inline: auto;
+  }
+
+  .offers__disclaimer {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .offers__disclaimer-btn {
+    align-self: flex-start;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -1215,12 +1259,33 @@ footer {
     padding-inline: var(--padding-inline-wide);
   }
 
-  .banner {
+  .banner,
+  .check-in,
+  .two-cards,
+  .discover,
+  .three-cards,
+  .offers {
     width: var(--max-width);
     margin-inline: auto;
   }
 
   .banner__card {
     width: 89%;
+  }
+
+  .check-in,
+  .two-cards,
+  .discover,
+  .three-cards,
+  .offers__tracking,
+  .offers__swiper,
+  .offers__disclaimer {
+    padding-inline: var(--padding-inline-wide);
+  }
+
+  .offers__tracking,
+  .offers__disclaimer {
+    margin-inline: 0;
+    width: 100%;
   }
 }
