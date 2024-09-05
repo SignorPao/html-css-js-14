@@ -63,3 +63,15 @@ const swiper = new Swiper(".swiper", {
     clickable: true,
   },
 });
+
+// offers swiper slider
+const offers_swiper = new Swiper(".offers__swiper", {
+  direction: "horizontal",
+  loop: false,
+  slidesPerView: 1,
+  spaceBetween: 24,
+  pagination: {
+    el: ".offers__swiper-pagination",
+    clickable: true,
+  },
+});

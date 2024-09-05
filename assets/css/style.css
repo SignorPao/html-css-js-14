@@ -717,6 +717,150 @@ section + section {
 }
 /* End Three cards section */
 
+/* Offers setion */
+.offers {
+  padding-inline: 0;
+}
+
+.offers__tracking,
+.offers__disclaimer {
+  padding-inline: var(--padding-inline);
+}
+
+.offers__tracking {
+  font-family: var(--font-main);
+  font-size: 24px;
+  font-weight: var(--font-weight-thin);
+  line-height: 1.8;
+}
+
+.offers__tracking a {
+  border-block-end: 1.6px solid var(--blue);
+}
+
+.offers__arrow {
+  width: 12px;
+  height: 12px;
+  margin-inline-start: var(--indent-default);
+}
+
+.offers__swiper {
+  overflow: hidden;
+  padding-block-start: 2rem;
+}
+
+.offers__swiper .swiper-slide {
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  transition: all var(--transition-fast);
+}
+
+.offers__swiper .swiper-slide:hover {
+  box-shadow: 0px 8px 26px 0px rgba(0, 0, 0, 0.25);
+}
+
+.offers__swiper .swiper-slide a {
+  width: 100%;
+  padding: var(--padding-inline);
+}
+
+.offers__slide-txt {
+  padding-block-start: var(--indent-default);
+}
+
+.offers__slide-txt p:first-of-type {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--indent-default) / 2);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-title-secondary);
+}
+
+.offers__slide-plane {
+  width: 14px;
+  height: 14px;
+  transform: rotate(45deg);
+}
+
+.offers__slide-txt p:last-of-type {
+  text-align: right;
+  font-size: 13px;
+  font-weight: var(--font-weight-thin);
+}
+
+.offers__slide-txt p:last-of-type span {
+  font-weight: var(--font-weight-bolder);
+  font-size: var(--font-size-title-primary);
+  margin-inline-start: calc(var(--indent-default) / 2);
+}
+
+.offers__swiper-pagination {
+  margin-block-start: 2rem;
+  text-align: center;
+}
+
+.offers__disclaimer {
+  margin-block-start: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--indent-default);
+}
+
+.offers__disclaimer-btn {
+  border: 2px solid var(--blue);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  background: var(--white);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.offers__disclaimer-btn a {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-title-secondary);
+  color: var(--blue);
+  transition: all var(--transition-fast);
+}
+
+.offers__disclaimer-btn:hover {
+  background: var(--blue);
+}
+
+.offers__disclaimer-btn:hover a {
+  color: var(--white);
+}
+
+.offers__disclaimer-txt {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: var(--indent-default);
+}
+
+.offers__disclaimer-txt p {
+  font-size: 12px;
+  font-weight: var(--font-weight-thin);
+}
+
+.offers__disclaimer-txt button{
+  display: flex;
+  align-items: center;
+  gap: calc(var(--indent-default) / 2);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-title-secondary);
+  color: var(--blue);
+}
+
+.offers__conditions-icon {
+  width: 16px;
+  height: 16px;
+}
+/* End Offers setion */
+
 /* 
 ==============================
 FOOTER
@@ -726,6 +870,7 @@ footer {
   width: 100%;
   height: 500px;
   background-color: var(--blue-2);
+  color: var(--white);
 }
 
 /* 
@@ -1043,7 +1188,7 @@ footer {
     width: 34px;
     height: 34px;
   }
-  
+
   .three-cards-txt {
     flex: calc(100% - calc(40px + var(--indent-default)));
   }
