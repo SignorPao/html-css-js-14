@@ -861,6 +861,56 @@ section + section {
 }
 /* End Offers setion */
 
+/* Destinations section */
+.destinations {
+}
+
+.destinations h3 {
+  font-family: var(--font-main);
+  font-size: var(--font-size-title-primary);
+  font-weight: var(--font-weight-thin);
+  margin-block-end: 2rem;
+}
+
+.destinations__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: calc(var(--indent-default) * 2);
+}
+
+.destinations__item {
+  border-block: thin solid var(--light-gray-3);
+  padding-inline: var(--padding-inline);
+  padding-block: 1rem;
+}
+
+.destinations__item:first-of-type {
+  border-block-end: none;
+}
+
+.destinations__item button {
+  color: var(--blue);
+  font-weight: var(--font-weight-bolder);
+  font-size: var(--font-size-title-secondary);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--indent-default);
+}
+
+.destinations__item span {
+  text-align: left;
+}
+
+.destination__arrow {
+  width: 16px;
+  height: 16px;
+  align-self: flex-start;
+  flex-shrink: 0;
+}
+/* End Destinations section */
+
 /* 
 ==============================
 FOOTER
@@ -1021,6 +1071,16 @@ footer {
     width: fit-content;
     align-self: flex-end;
   }
+
+  .destinations__container {
+    flex-direction: row;
+    gap: var(--padding-inline);
+    flex-wrap: wrap;
+  }
+
+  .destinations__container article {
+    width: calc(50% - var(--padding-inline));
+  }
 }
 
 @media (min-width: 1024px) {
@@ -1131,7 +1191,8 @@ footer {
   .check-in,
   .two-cards,
   .discover,
-  .three-cards {
+  .three-cards,
+  .destinations {
     width: 85%;
   }
 
@@ -1156,7 +1217,8 @@ footer {
   .check-in,
   .two-cards,
   .discover,
-  .three-cards {
+  .three-cards,
+  .destinations {
     padding-inline: 0;
   }
 
@@ -1236,6 +1298,14 @@ footer {
   .offers__disclaimer-btn {
     align-self: flex-start;
   }
+
+  .destinations__container {
+    flex-wrap: nowrap;
+  }
+
+  .destinations__container article {
+    width: calc(100% / 3);
+  }
 }
 
 @media (min-width: 1280px) {
@@ -1264,7 +1334,8 @@ footer {
   .two-cards,
   .discover,
   .three-cards,
-  .offers {
+  .offers,
+  .destinations {
     width: var(--max-width);
     margin-inline: auto;
   }
@@ -1279,7 +1350,8 @@ footer {
   .three-cards,
   .offers__tracking,
   .offers__swiper,
-  .offers__disclaimer {
+  .offers__disclaimer,
+  .destinations {
     padding-inline: var(--padding-inline-wide);
   }
 
