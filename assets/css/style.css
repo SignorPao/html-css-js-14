@@ -913,7 +913,7 @@ section + section {
 /* End Destinations section */
 
 /* Payment & follow section */
-.payment svg {
+.payment-follow svg {
   width: 24px;
   height: 24px;
 }
