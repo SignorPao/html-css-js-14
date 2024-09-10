@@ -942,9 +942,43 @@ FOOTER
 ==============================
 */
 footer {
-  width: 100%;
-  height: 500px;
-  background-color: var(--blue-2);
+  /* width: 100%; */
+}
+
+.footer__main {
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+.footer__main,
+.footer__bottom {
+  padding-inline: var(--padding-inline);
+  padding-block: var(--indent-default);
+}
+
+.search__block {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: space-between; */
+}
+
+.pc__selector {
+  display: none;
+}
+
+.language__selector-footer button {
+  /* padding-inline-start: var(--padding-inline); */
+  color: var(--light-gray-2);
+  font-weight: var(--font-weight-medium);
+  font-size: 1.7rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: color var(--transition);
+}
+
+.language__selector-footer button:hover {
   color: var(--white);
 }
 
