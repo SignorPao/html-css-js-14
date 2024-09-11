@@ -1423,7 +1423,25 @@
       <div class="footer__main">
         <div class="footer__main-container wrapper">
           <div class="search__block">
-            <div class="search">search</div>
+            <form class="footer__search">
+              <div class="footer__input-wrapper">
+                <input
+                  type="text"
+                  name="search"
+                  id="search"
+                  autocomplete="off"
+                  required
+                />
+                <label for="search">Enter search term</label>
+                <svg class="footer__search-icon" width="" height="">
+                  <use
+                    xlink:href="/assets/icons/search.svg#search"
+                    width="100%"
+                    height="100%"
+                  ></use>
+                </svg>
+              </div>
+            </form>
             <div class="language__selector-footer pc__selector">
               <button>
                 <svg class="globe" width="" height="">
