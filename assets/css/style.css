@@ -747,6 +747,7 @@ section + section {
 .offers__swiper {
   overflow: hidden;
   padding-block-start: 2rem;
+  z-index: 1;
 }
 
 .offers__swiper .swiper-slide {
@@ -1028,7 +1029,6 @@ footer {
 }
 
 .language__selector-footer button {
-  /* padding-inline-start: var(--padding-inline); */
   color: var(--light-gray-2);
   font-weight: var(--font-weight-medium);
   font-size: 1.7rem;
