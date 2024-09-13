@@ -44,9 +44,9 @@
   /* Other values */
   --transition: 300ms ease-in;
   --transition-fast: 150ms ease-in;
-  --z-header: 3;
-  --z-mobile-menu: 2;
-  --z-overlay: 1;
+  --z-header: 4;
+  --z-mobile-menu: 3;
+  --z-overlay: 2;
 }
 
 /* 
@@ -200,6 +200,11 @@ button#burger:hover {
   padding-block: var(--indent-default);
   font-size: 1.8rem;
   font-weight: 700;
+}
+
+.mobile__menu-list a {
+  /* pointer-events: none; */
+  cursor: pointer;
 }
 
 .mobile__menu-link {
@@ -748,6 +753,7 @@ section + section {
   overflow: hidden;
   padding-block-start: 2rem;
   z-index: 1;
+  position: relative;
 }
 
 .offers__swiper .swiper-slide {
