@@ -1064,7 +1064,10 @@ footer {
   box-sizing: border-box;
 }
 
-.accordion__item-content {
+.accordion__item-content,
+.accordion__item-content-2,
+.accordion__item-content-3,
+.accordion__item-content-4 {
   /* background: #ffffcc; */
   /* width: 500px; */
   overflow: hidden;
@@ -1075,7 +1078,10 @@ footer {
   box-sizing: border-box;
 }
 
-#state:checked ~ .accordion__item-content {  
+#state:checked ~ .accordion__item-content,
+#state-2:checked ~ .accordion__item-content-2,
+#state-3:checked ~ .accordion__item-content-3,
+#state-4:checked ~ .accordion__item-content-4 {
   max-height: 150px;
 }
 
@@ -1245,6 +1251,30 @@ footer {
   .payment,
   .follow {
     flex: 50%;
+  }
+
+  .footer__accordion-block {
+    display: flex;
+    row-gap: var(--indent-default);
+  }
+
+  .footer__accordion-item{
+    flex: 1 ;
+  }
+
+  .accordion__item-title {
+    cursor: auto;
+    font-size: var(--font-size-small);
+    padding-inline: var(--indent-default);
+  }
+  
+  .accordion__item-content,
+  .accordion__item-content-2,
+  .accordion__item-content-3,
+  .accordion__item-content-4 {
+    max-height: fit-content;
+    font-size: var(--font-size-small);
+    padding-inline: var(--indent-default);
   }
 }
 
