@@ -1082,7 +1082,7 @@ footer {
 #state-2:checked ~ .accordion__item-content-2,
 #state-3:checked ~ .accordion__item-content-3,
 #state-4:checked ~ .accordion__item-content-4 {
-  max-height: 150px;
+  max-height: 200px;
 }
 
 /* 
