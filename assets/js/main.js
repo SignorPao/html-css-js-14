@@ -84,3 +84,13 @@ const offers_swiper = new Swiper(".offers__swiper", {
     },
   },
 });
+
+// footer accordion
+let footerAccordion = document.getElementsByClassName("accordion__item-title");
+for (let i = 0; i < footerAccordion.length; i++) {
+  footerAccordion[i].addEventListener("click", function () {
+    console.log("clicked");
+
+    this.classList.toggle("show-footer-menu");
+  });
+}

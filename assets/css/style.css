@@ -1074,6 +1074,14 @@ footer {
   /* width: 500px; */
   box-sizing: border-box;
   /* width: 100%; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.arrow-footer {
+  width: 14px;
+  height: 12px;
 }
 
 .footer__accordion-item ul {
@@ -1114,6 +1122,11 @@ footer {
   margin-block-start: var(--indent-default);
 
   /* max-height: fit-content; */
+}
+
+.accordion__item-title.show-footer-menu .arrow-footer {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
 }
 
 .footer__bottom {
