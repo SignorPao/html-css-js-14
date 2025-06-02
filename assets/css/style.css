@@ -1063,7 +1063,7 @@ footer {
 }
 
 .accordion__item-title {
-  border-bottom: thin solid var(--white);
+  border-bottom: thin solid var(--gray-blue);
   padding-inline: var(--padding-inline);
   padding-block: calc(var(--indent-default) / 2);
   /* background: #ccffff; */
