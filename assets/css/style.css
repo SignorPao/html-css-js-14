@@ -1035,7 +1035,7 @@ footer {
   display: none;
 }
 
-.language__selector-footer{
+.language__selector-footer {
   padding-inline: var(--padding-inline);
   margin-block: 4rem;
 }
@@ -1134,7 +1134,15 @@ footer {
   -webkit-transform: rotate(180deg);
 }
 
-.language__selector-footer{}
+.separator__block {
+  padding-inline: var(--padding-inline);
+  margin-bottom: 3rem;
+}
+
+.separator__block-divider {
+  display: block;
+  border-top: 2px solid var(--gray-blue);
+}
 
 .footer__bottom {
   padding-inline: var(--padding-inline);
