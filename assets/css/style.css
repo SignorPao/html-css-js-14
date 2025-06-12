@@ -1415,6 +1415,12 @@ footer {
 
   .pc__selector button {
     font-size: var(--font-size-small);
+    color: var(--light-gray-2);
+    transition: color var(--transition);
+  }
+
+  .pc__selector button:hover {
+    color: var(--white);
   }
 
   .pc__selector .globe {
@@ -1426,6 +1432,15 @@ footer {
     column-gap: var(--indent-default);
     flex-direction: row;
     padding-inline: var(--padding-inline);
+  }
+
+  .footer__accordion-block a {
+    color: var(--light-gray-2);
+    transition: color var(--transition);
+  }
+
+  .footer__accordion-block a:hover {
+    color: var(--white);
   }
 
   .footer__accordion-item {
@@ -1728,6 +1743,23 @@ footer {
 
   .destinations__container article {
     width: calc(100% / 3);
+  }
+
+  .footer__main-container,
+  .footer__bottom-container {
+    width: 85%;
+  }
+
+  .search__block,
+  .pc__selector,
+  .footer__accordion-block,
+  .separator__block,
+  .footer__bottom {
+    padding-inline: 0;
+  }
+
+  .links__block {
+    padding-inline: calc(var(--indent-default) / 2);
   }
 }
 
