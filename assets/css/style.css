@@ -1193,6 +1193,15 @@ FOOTER
   letter-spacing: 1.2px;
 }
 
+.author {
+  width: 100%;
+  padding-block: var(--indent-default);
+  display: flex;
+  justify-content: center;
+  font-size: var(--font-size-smaller);
+  text-align: center;
+}
+
 /* 
 ==============================
   MEDIA QUERIES
@@ -1352,7 +1361,7 @@ FOOTER
     width: calc(50% - var(--padding-inline));
   }
 
-  .destinations__item{
+  .destinations__item {
     padding-inline: 0;
   }
 

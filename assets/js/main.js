@@ -94,3 +94,10 @@ for (let i = 0; i < footerAccordion.length; i++) {
     this.classList.toggle("show-footer-menu");
   });
 }
+
+// this year
+let timeContainer = document.querySelector(".author time"),
+  thisYear = new Date().getFullYear();
+if (thisYear > 2024) {
+  timeContainer.innerHTML = `2024 - ${thisYear}.`;
+}
